@@ -78,30 +78,36 @@ public class Benchmark<T> {
         //populate the array with real random data
 //        List<Integer> schufleList;
 ////        shuffleArray(array);
+//    for(int i =0;i<array.length/32;i++){
+//            System.out.print(array[i]+" ");
+//        }
+//        System.out.println();
         Collections.shuffle(Arrays.asList(array));
-
-        System.out.println("\nThe following is the result of sorting the random array:");
-        for(n=200; n<=3200;n=2*n)
-        {
-        	benchmarkSort(array, n, "SelectionSort", new SelectionSort<>(), m);
-        	benchmarkSort(array, n, "InsertionSort", new InsertionSort<>(), m);
-        }
-        
-        for (int i = 0; i < 1600; i++) array[i] = i;
-        System.out.println("\nThe following is the result of sorting the partially sorted array:");
-        for(n=200; n<=3200;n=2*n)
-        {
-        	benchmarkSort(array, n, "SelectionSort", new SelectionSort<>(), m);
-        	benchmarkSort(array, n, "InsertionSort", new InsertionSort<>(), m);
-        }
-        
-        for (int i = 0; i < 3200; i++) array[i] = array.length-i;
-        System.out.println("\nThe following is the result of sorting the reverse sorted array:");
-        for(n=200; n<=3200;n=2*n)
-        {
-        	benchmarkSort(array, n, "SelectionSort", new SelectionSort<>(), m);
-        	benchmarkSort(array, n, "InsertionSort", new InsertionSort<>(), m);
-        }
+//        for(int i =0;i<array.length/32;i++){
+//            System.out.print(array[i]+" ");
+//        }
+//        System.out.println("\nThe following is the result of sorting the random array:");
+//        for(n=200; n<=3200;n=2*n)
+//        {
+//        	benchmarkSort(array, n, "SelectionSort", new SelectionSort<>(), m);
+//        	benchmarkSort(array, n, "InsertionSort", new InsertionSort<>(), m);
+//        }
+//        
+//        for (int i = 0; i < 1600; i++) array[i] = i;
+//        System.out.println("\nThe following is the result of sorting the partially sorted array:");
+//        for(n=200; n<=3200;n=2*n)
+//        {
+//        	benchmarkSort(array, n, "SelectionSort", new SelectionSort<>(), m);
+//        	benchmarkSort(array, n, "InsertionSort", new InsertionSort<>(), m);
+//        }
+//        
+//        for (int i = 0; i < 3200; i++) array[i] = array.length-i;
+//        System.out.println("\nThe following is the result of sorting the reverse sorted array:");
+//        for(n=200; n<=3200;n=2*n)
+//        {
+//        	benchmarkSort(array, n, "SelectionSort", new SelectionSort<>(), m);
+//        	benchmarkSort(array, n, "InsertionSort", new InsertionSort<>(), m);
+//        }
     }
 
     private static void benchmarkSort(Integer[] xs, Integer n, String name, Sort<Integer> sorter, int m) {
